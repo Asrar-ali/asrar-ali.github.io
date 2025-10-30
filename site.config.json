@@ -1,0 +1,28 @@
+{
+  "name": "Mohammed Asrar Ali",
+  "role": "Thoughtful, pragmatic engineer",
+  "email": "mali46@lakeheadu.ca",
+  "location": "Toronto, ON",
+  "socials": {
+    "github": "https://github.com/Asrar-ali",
+    "linkedin": "https://www.linkedin.com/in/md-ali01/"
+  },
+  "now": {
+    "month": "October 2025",
+    "learning": [
+      "Advanced data modeling",
+      "Type-safe APIs with tRPC"
+    ],
+    "building": [
+      "Refining ETL for retail insights",
+      "Improving model serving on Azure"
+    ]
+  },
+  "palette": {
+    "bg": "#0b0e14",
+    "fg": "#e6e6e6",
+    "primary": "#3b82f6",
+    "secondary": "#f59e0b",
+    "muted": "#93c5fd"
+  }
+}

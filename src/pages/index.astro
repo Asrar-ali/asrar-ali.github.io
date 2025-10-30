@@ -1,0 +1,33 @@
+---
+import Base from "@/layouts/Base.astro";
+import config from "../../site.config.json";
+const title = "Md Ali — clean code, reliable execution";
+const description = "Thoughtful, pragmatic engineer. I build maintainable systems with measurable impact.";
+---
+<Base {title} {description}>
+  <section class="grid md:grid-cols-[1.2fr,0.8fr] gap-10 items-center pt-10 md:pt-16">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-semibold leading-tight">
+        Mohammed Asrar Ali
+      </h1>
+      <p class="mt-4 text-lg text-zinc-300 max-w-prose">
+        I ship dependable software with clean code and subtle flair. Recently: cut scheduling errors by 40% with a Flask + React system on Azure; delivered analytics that reduced manual reporting time.
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="/contact" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 focus:ring-2 focus:ring-brand-500">Contact</a>
+        <a href="/projects" class="px-4 py-2 rounded-lg border border-zinc-700 hover:border-brand-500">View Projects</a>
+      </div>
+      <div class="mt-8 text-sm text-zinc-400">
+        <strong>Now</strong>: {config.now.month} — learning {config.now.learning.join(", ")}; building {config.now.building.join(", ")}.
+      </div>
+    </div>
+    <div class="relative rounded-2xl border border-zinc-800 p-6">
+      <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-500/10 to-accent-500/10 -z-10"></div>
+      <p class="text-sm uppercase tracking-widest text-zinc-400">Skills snapshot</p>
+      <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
+        <li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>Flask</li><li>React</li><li>Azure</li><li>Docker</li>
+      </ul>
+      <a href="/experience" class="mt-6 inline-block text-brand-400 hover:underline">See experience →</a>
+    </div>
+  </section>
+</Base>

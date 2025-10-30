@@ -1,0 +1,29 @@
+{
+  "name": "md-ali-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/cache-github.js",
+    "preview": "astro preview",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "astro": "^4.15.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/rss": "^4.0.6",
+    "framer-motion": "^11.2.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.42",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.5.4"
+  }
+}

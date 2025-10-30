@@ -1,0 +1,46 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import ThemeToggle from "@/components/ThemeToggle.astro";
+import Spine from "@/components/Spine.astro";
+const { title = Astro.props.title ?? "Md Ali — Portfolio", description = Astro.props.description ?? "Clean code. Reliable execution. Subtle flair.", } = Astro.props;
+import config from "../../site.config.json";
+---
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b0e14" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet" />
+    <ViewTransitions />
+  </head>
+  <body class="bg-[#0b0e14] text-zinc-100 antialiased selection:bg-brand-500/30">
+    <Spine />
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black/70 px-3 py-2 rounded">Skip to content</a>
+    <header class="px-6 md:px-10 py-5 flex items-center justify-between">
+      <a href="/" class="font-semibold tracking-wide">Md Ali</a>
+      <nav class="flex gap-4 text-sm">
+        <a href="/projects" class="hover:text-brand-400">Projects</a>
+        <a href="/experience" class="hover:text-brand-400">Experience</a>
+        <a href="/about" class="hover:text-brand-400">About</a>
+        <a href="/contact" class="hover:text-brand-400">Contact</a>
+      </nav>
+      <ThemeToggle />
+    </header>
+    <main id="main" class="px-6 md:px-10">{Astro.slot}</main>
+    <footer class="px-6 md:px-10 py-10 text-sm text-zinc-400">
+      <div class="flex flex-wrap gap-4">
+        <a href={config.socials.github} aria-label="GitHub">GitHub</a>
+        <a href={config.socials.linkedin} aria-label="LinkedIn">LinkedIn</a>
+        <a href={"mailto:"+config.email} aria-label="Email">Email</a>
+      </div>
+      <p class="mt-4">© {new Date().getFullYear()} Md Ali. Built with Astro & Tailwind.</p>
+    </footer>
+    <script src="/scripts/persist-theme.js" defer></script>
+  </body>
+</html>

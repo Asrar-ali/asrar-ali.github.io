@@ -1,0 +1,25 @@
+---
+import Base from "@/layouts/Base.astro";
+import config from "../../site.config.json";
+---
+<Base title="Contact — Md Ali" description="Get in touch.">
+  <h1 class="text-3xl md:text-4xl font-semibold mb-6">Contact</h1>
+  <p class="text-zinc-300">Prefer email? <a class="text-brand-400 hover:underline" href={"mailto:"+config.email}>{config.email}</a>
+  <button class="ml-2 px-2 py-1 text-xs border border-zinc-700 rounded copy" data-email={config.email}>Copy</button></p>
+  <form action="https://formspree.io/f/xyyypseudo" method="POST" class="mt-6 grid gap-3 max-w-lg" data-honeypot="bot-field">
+    <input type="text" name="name" required placeholder="Name" class="bg-zinc-900 border border-zinc-700 rounded px-3 py-2" />
+    <input type="email" name="_replyto" required placeholder="Email" class="bg-zinc-900 border border-zinc-700 rounded px-3 py-2" />
+    <textarea name="message" rows="5" required placeholder="Message" class="bg-zinc-900 border border-zinc-700 rounded px-3 py-2"></textarea>
+    <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" />
+    <button type="submit" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500">Send</button>
+  </form>
+  <script>
+    document.addEventListener('click', (e) => {
+      if(e.target?.classList.contains('copy')){
+        navigator.clipboard.writeText(e.target.dataset.email);
+        e.target.textContent = "Copied";
+        setTimeout(()=> e.target.textContent="Copy", 1500);
+      }
+    });
+  </script>
+</Base>

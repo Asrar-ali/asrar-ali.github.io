@@ -1,0 +1,33 @@
+{
+  "fetchedAt": "2025-10-29T00:00:00.000Z",
+  "repos": [
+    {
+      "name": "Pneumonia-Detection",
+      "description": "CNN model on chest X-rays with Flask API for real-time inference.",
+      "html_url": "https://github.com/Asrar-ali/Pneumonia-Detection",
+      "stars": 2,
+      "language": "Python"
+    },
+    {
+      "name": "RetailBI-Dashboard",
+      "description": "Power BI retail analytics with automated refresh.",
+      "html_url": "https://github.com/Asrar-ali/RetailBI-Dashboard",
+      "stars": 1,
+      "language": "DAX"
+    },
+    {
+      "name": "weather-app",
+      "description": "React SPA using OpenWeatherMap API with caching.",
+      "html_url": "https://github.com/Asrar-ali/weather-app",
+      "stars": 1,
+      "language": "JavaScript"
+    },
+    {
+      "name": "Python",
+      "description": "Misc Python projects and exercises.",
+      "html_url": "https://github.com/Asrar-ali/Python",
+      "stars": 0,
+      "language": "Python"
+    }
+  ]
+}

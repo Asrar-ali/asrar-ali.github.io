@@ -1,0 +1,54 @@
+---
+import Base from "@/layouts/Base.astro";
+const title = "Projects — Md Ali";
+const description = "Selected projects with context, architecture, and outcomes.";
+const cache = await Astro.glob("../../public/cache/*.json");
+let repos = [];
+try {
+  const data = await import("../../public/cache/github-cache.json");
+  repos = data.default.repos ?? [];
+} catch {}
+---
+<Base {title} {description}>
+  <h1 class="text-3xl md:text-4xl font-semibold mb-6">Projects</h1>
+  <p class="text-zinc-300 mb-6">Auto‑curated from GitHub; deep dives below.</p>
+  <div class="grid md:grid-cols-2 gap-6">
+    {repos.map(r => (
+      <article class="group rounded-2xl border border-zinc-800 p-5 hover:border-brand-500/50 transition-colors">
+        <h2 class="text-xl font-semibold">{r.name}</h2>
+        <p class="mt-2 text-sm text-zinc-300">{r.description}</p>
+        <div class="mt-3 flex gap-3 text-xs text-zinc-400">
+          <span>★ {r.stars}</span>
+          <span>{r.language}</span>
+        </div>
+        <a href={r.html_url} class="mt-4 inline-block text-brand-400 hover:underline">Source →</a>
+      </article>
+    ))}
+  </div>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold">Deep dives</h2>
+    <div class="mt-6 grid gap-8">
+      <article class="rounded-2xl border border-zinc-800 p-6">
+        <h3 class="text-xl font-semibold">Pneumonia Detection — From dataset to deploy</h3>
+        <p class="mt-2 text-zinc-300">CNN on 5k chest X‑rays (AUC 0.91), served behind a Flask API on Azure App Service.</p>
+        <img src="/covers/pneumonia.svg" alt="Pneumonia Detection architecture diagram" class="mt-4 w-full h-auto" loading="lazy" />
+        <ul class="mt-4 list-disc pl-5 text-zinc-300 text-sm">
+          <li>Architecture: PyTorch + Flask + Azure App Service; storage in Blob; CI via GitHub Actions.</li>
+          <li>Hardest bug: data leakage from unstratified split—fixed with stratified K‑fold.</li>
+          <li>Result: reliable serving; AUC 0.91; fast cold start with pre-loading weights.</li>
+        </ul>
+      </article>
+      <article class="rounded-2xl border border-zinc-800 p-6">
+        <h3 class="text-xl font-semibold">Retail Sales Analytics — ETL to insight</h3>
+        <p class="mt-2 text-zinc-300">ETL of 20k transactions into a Power BI dashboard, surfacing under‑performing SKUs.</p>
+        <img src="/covers/retailbi.svg" alt="Retail analytics pipeline diagram" class="mt-4 w-full h-auto" loading="lazy" />
+        <ul class="mt-4 list-disc pl-5 text-zinc-300 text-sm">
+          <li>Architecture: Python ETL → SQL → Power BI with daily refresh.</li>
+          <li>Hardest bug: timezone skew in daily rollups—normalized to store locale.</li>
+          <li>Result: automated summaries; reduced manual reporting time for stakeholders.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</Base>

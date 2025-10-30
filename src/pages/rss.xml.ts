@@ -1,5 +1,5 @@
 import rss from '@astrojs/rss';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../rssConfig';
+import { SITE_TITLE, SITE_DESCRIPTION } from './rssConfig';
 
 export const GET = async () => {
   const posts = import.meta.glob('../../content/posts/*.mdx', { eager: true }) as any;

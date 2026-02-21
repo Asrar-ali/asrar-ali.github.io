@@ -1,19 +1,131 @@
 ---
 import Base from "@/layouts/Base.astro";
 ---
-<Base title="Experience — Md Ali" description="Experience and measurable outcomes.">
-  <h1 class="text-3xl md:text-4xl font-semibold mb-8">Experience</h1>
-  <ol class="relative border-s border-zinc-800 ps-6">
-    <li class="mb-10">
-      <div class="absolute -start-1 top-1.5 h-2 w-2 rounded-full bg-brand-500"></div>
-      <h2 class="font-semibold">Maintair Aviation — Software Engineering Intern</h2>
-      <p class="text-sm text-zinc-400">May 2024 – Aug 2024 · Thunder Bay, ON</p>
-      <ul class="mt-2 list-disc pl-5 text-zinc-300">
-        <li>Built and deployed a Flask + React flight‑schedule manager on Azure App Service → cut scheduling errors by <strong>40%</strong>.</li>
-        <li>Modeled data in Azure SQL & stored assets in Blob; hourly pipeline processed schedule rows and generated weekly reports.</li>
-        <li>Secured REST APIs with Managed Identities; added Application Insights metrics and alerts to maintain availability.</li>
-        <li>Drove two‑week sprints, shipping features on schedule.</li>
-      </ul>
-    </li>
-  </ol>
+<Base title="Experience — Mohammed Asrar Ali" description="Work experience and measurable outcomes.">
+  <section class="py-12 md:py-16">
+    <div class="animate-fade-up opacity-100">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">Experience</h1>
+      <p class="text-zinc-400 max-w-lg text-lg">Where I've worked and what I've shipped.</p>
+    </div>
+
+    <div class="mt-12 space-y-0">
+      <!-- Experience 1: Trend Micro -->
+      <div class="reveal relative pl-8 pb-12 border-l border-surface-200">
+        <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-green-500 ring-4 ring-surface-0"></div>
+        <div class="glow-card p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <h2 class="font-display text-xl font-semibold">Software Developer Co-op</h2>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-green-500/10 text-green-400 text-xs font-mono font-medium flex items-center gap-1.5">
+                <span class="status-dot" style="width:6px;height:6px;"></span> CURRENT
+              </span>
+              <span class="font-mono text-xs text-zinc-500">Jan 2026 &mdash; Present</span>
+            </div>
+          </div>
+          <p class="text-brand-400 text-sm font-medium">Trend Micro &middot; Ottawa, ON</p>
+          <ul class="mt-4 space-y-2 text-zinc-300 text-sm leading-relaxed">
+            <li class="flex gap-2">
+              <span class="text-brand-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Built features for the <span class="text-zinc-100 font-medium">Cloud One platform</span> using Java; integrated CI/CD with Jenkins and validated workloads on AWS EC2</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brand-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Ported agent support to <span class="text-zinc-100 font-medium">SUSE Linux 16</span>; updated deployment scripts, OS mappings, UI metadata, and versioning pages</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brand-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Delivered a report generator to a customer in just <span class="text-brand-400 font-medium">3 days</span>, helping secure an enterprise deal</span>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Jenkins</span>
+            <span class="tech-badge">AWS EC2</span>
+            <span class="tech-badge">Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2: Maintair Aviation -->
+      <div class="reveal relative pl-8 pb-12 border-l border-surface-200">
+        <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-500 ring-4 ring-surface-0"></div>
+        <div class="glow-card p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <h2 class="font-display text-xl font-semibold">Software Engineering Intern</h2>
+            <span class="font-mono text-xs text-zinc-500">May 2024 &mdash; Aug 2024</span>
+          </div>
+          <p class="text-brand-400 text-sm font-medium">Maintair Aviation &middot; Thunder Bay, ON</p>
+          <ul class="mt-4 space-y-2 text-zinc-300 text-sm leading-relaxed">
+            <li class="flex gap-2">
+              <span class="text-brand-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Built and deployed a <span class="text-zinc-100 font-medium">Flask + React flight-schedule manager</span> on Azure App Service, replacing spreadsheets and reducing scheduling errors by <span class="text-brand-400 font-medium">40%</span></span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brand-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Designed flight scheduling tables in Azure SQL Database and stored static assets in Blob Storage; automated weekly reporting for stakeholders</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brand-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Implemented REST APIs secured with Managed Identities and instrumented Application Insights metrics/alerts</span>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Azure</span>
+            <span class="tech-badge">SQL</span>
+            <span class="tech-badge">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3: Code4kids -->
+      <div class="reveal relative pl-8 border-l border-surface-200">
+        <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-accent-500 ring-4 ring-surface-0"></div>
+        <div class="glow-card p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <h2 class="font-display text-xl font-semibold">Volunteer Teaching Assistant</h2>
+            <span class="font-mono text-xs text-zinc-500">May 2023 &mdash; Present</span>
+          </div>
+          <p class="text-accent-500 text-sm font-medium">Code4kids &middot; Remote, Canada</p>
+          <ul class="mt-4 space-y-2 text-zinc-300 text-sm leading-relaxed">
+            <li class="flex gap-2">
+              <span class="text-accent-500 mt-1 shrink-0">&rsaquo;</span>
+              <span>Support weekly Python and web-development sessions for <span class="text-zinc-100 font-medium">30+ learners</span>; help deliver project-based curriculum and debugging assistance</span>
+            </li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Web Dev</span>
+            <span class="tech-badge">Teaching</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-line mt-16 mb-16"></div>
+
+    <!-- Education -->
+    <div class="reveal">
+      <h2 class="font-display text-3xl font-semibold mb-8">Education</h2>
+
+      <div class="relative pl-8 border-l border-surface-200">
+        <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-brand-500 ring-4 ring-surface-0"></div>
+        <div class="glow-card p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+            <h3 class="font-display text-xl font-semibold">Honours BSc in Computer Science</h3>
+            <span class="font-mono text-xs text-zinc-500">2023 &mdash; Apr 2027</span>
+          </div>
+          <p class="text-brand-400 text-sm font-medium">Lakehead University &middot; Thunder Bay, ON</p>
+          <p class="text-zinc-400 text-sm mt-3">Specialization in AI &amp; Web Development. <span class="text-zinc-200 font-medium">GPA: 3.7/4.0</span></p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-2.5 py-1 rounded-md bg-accent-500/10 text-accent-400 text-xs font-medium">Dean's List</span>
+            <span class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs font-medium">Tamblyn Merit Scholarship</span>
+          </div>
+          <p class="text-zinc-500 text-xs mt-3">Coursework: Data Structures &amp; Algorithms, OOP, Database Management, Machine Learning, Linear Algebra, Statistics</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

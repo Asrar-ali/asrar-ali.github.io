@@ -1,35 +1,57 @@
-# Md Ali — Portfolio (Astro + Tailwind)
+# asrar-ali.github.io
 
-Dark-by-default, accessible, high-performance portfolio with a scroll-linked timeline spine and auto-curated GitHub projects.
+My personal portfolio website. Built with Astro and Tailwind CSS.
 
-## Local development
+**Live:** [asrar-ali.github.io](https://asrar-ali.github.io)
+
+## Tech Stack
+
+- **Framework:** [Astro](https://astro.build/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Fonts:** Space Grotesk, JetBrains Mono, Inter
+- **Deployment:** GitHub Pages (auto-deploy on push)
+
+## Local Development
+
 ```bash
-pnpm i   # or npm i / yarn
-pnpm dev
+npm install
+npm run dev
 ```
 
-## Build & deploy (GitHub Pages)
-1. Push to a repository named `asrar-ali.github.io` **or** any repo and enable Pages (Build from GitHub Actions).
-2. Use the provided workflow in `.github/workflows/pages.yml`.
-3. On build, `scripts/cache-github.js` populates `public/cache/github-cache.json` from GitHub’s API.
+Open [localhost:4321](http://localhost:4321)
 
-### Netlify
-- Add a new site from Git. Build command: `npm run build`. Publish directory: `dist/`.
+## Build
 
-### Vercel
-- Import the repo. Framework preset: **Astro**. That’s it.
+```bash
+npm run build
+npm run preview
+```
 
-## Performance targets
-- Lighthouse: Perf ≥ 95, A11y ≥ 95, BP ≥ 95, SEO ≥ 95.
-- Tips: Keep images SVG/PNG with `loading="lazy"`, limit JS islands, ship only what’s needed.
+## Project Structure
 
-## Content editing
-- Update `site.config.json` for name, role, socials, and “Now” widget.
-- Add/edit posts in `content/posts/*.mdx`.
-- Add deep-dive writeups in `src/pages/projects.astro` or migrate to content collection.
+```
+src/
+  layouts/Base.astro    # Shared layout (nav, footer, meta)
+  pages/
+    index.astro         # Homepage
+    projects.astro      # Projects showcase
+    experience.astro    # Work experience & education
+    about.astro         # About me
+    contact.astro       # Contact form & links
+    404.astro           # Custom 404 page
+  styles/global.css     # Global styles & animations
+site.config.json        # Site-wide configuration
+public/
+  resume.pdf            # Resume download
+  og.png                # Social preview image
+```
 
-## Accessibility
-- Semantic landmarks, skip link, focus styles, keyboard nav, reduced motion respected.
+## Editing Content
+
+Update `site.config.json` to change name, role, socials, and current status.
+
+Pages are in `src/pages/` as Astro components.
 
 ## License
+
 MIT

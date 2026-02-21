@@ -1,33 +1,33 @@
 {
-  "fetchedAt": "2025-10-29T00:00:00.000Z",
+  "fetchedAt": "2026-02-21T00:00:00.000Z",
   "repos": [
     {
+      "name": "system-design-assistant",
+      "description": "RAG-powered chat interface for system design interview preparation with hybrid search and source citations.",
+      "html_url": "https://github.com/Asrar-ali/system-design-assistant",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
+      "name": "campus-rag-assistant",
+      "description": "Local RAG assistant with Qdrant, BGE-M3 embeddings, and Ollama for document Q&A with citations.",
+      "html_url": "https://github.com/Asrar-ali/campus-rag-assistant",
+      "stars": 0,
+      "language": "Python"
+    },
+    {
       "name": "Pneumonia-Detection",
-      "description": "CNN model on chest X-rays with Flask API for real-time inference.",
+      "description": "CNN trained on 5,863 chest X-rays achieving 92% accuracy, served via Flask API.",
       "html_url": "https://github.com/Asrar-ali/Pneumonia-Detection",
       "stars": 2,
       "language": "Python"
     },
     {
-      "name": "RetailBI-Dashboard",
-      "description": "Power BI retail analytics with automated refresh.",
-      "html_url": "https://github.com/Asrar-ali/RetailBI-Dashboard",
-      "stars": 1,
-      "language": "DAX"
-    },
-    {
       "name": "weather-app",
-      "description": "React SPA using OpenWeatherMap API with caching.",
+      "description": "React weather app with real-time updates using OpenWeatherMap API.",
       "html_url": "https://github.com/Asrar-ali/weather-app",
       "stars": 1,
       "language": "JavaScript"
-    },
-    {
-      "name": "Python",
-      "description": "Misc Python projects and exercises.",
-      "html_url": "https://github.com/Asrar-ali/Python",
-      "stars": 0,
-      "language": "Python"
     }
   ]
 }

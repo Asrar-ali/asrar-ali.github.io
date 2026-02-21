@@ -1,28 +1,32 @@
 {
   "name": "Mohammed Asrar Ali",
-  "role": "Thoughtful, pragmatic engineer",
+  "role": "Software Developer @ Trend Micro",
+  "tagline": "I argue with LLMs for a living.",
   "email": "mali46@lakeheadu.ca",
   "location": "Toronto, ON",
+  "university": "Lakehead University",
+  "degree": "Honours BSc Computer Science (AI & Web Dev), GPA: 3.7/4.0",
+  "gradDate": "Expected Apr. 2027",
   "socials": {
     "github": "https://github.com/Asrar-ali",
     "linkedin": "https://www.linkedin.com/in/md-ali01/"
   },
   "now": {
-    "month": "October 2025",
-    "learning": [
-      "Advanced data modeling",
-      "Type-safe APIs with tRPC"
-    ],
-    "building": [
-      "Refining ETL for retail insights",
-      "Improving model serving on Azure"
-    ]
+    "month": "February 2026",
+    "role": "Software Developer Co-op at Trend Micro",
+    "building": "Cloud One platform features at Trend Micro",
+    "demo": "https://huggingface.co/spaces/md-asrar/system-design-assistant"
   },
+  "interests": [
+    "Retrieval-Augmented Generation",
+    "Machine Learning",
+    "Cloud & DevOps"
+  ],
   "palette": {
-    "bg": "#0b0e14",
-    "fg": "#e6e6e6",
-    "primary": "#3b82f6",
-    "secondary": "#f59e0b",
-    "muted": "#93c5fd"
+    "bg": "#09090b",
+    "fg": "#fafafa",
+    "primary": "#6366f1",
+    "accent": "#f59e0b",
+    "muted": "#a1a1aa"
   }
 }

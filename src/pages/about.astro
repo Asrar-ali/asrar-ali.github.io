@@ -1,8 +1,126 @@
 ---
 import Base from "@/layouts/Base.astro";
+import config from "../../site.config.json";
 ---
-<Base title="About — Md Ali" description="Concise bio and a few personal notes.">
-  <h1 class="text-3xl md:text-4xl font-semibold mb-6">About</h1>
-  <p class="text-zinc-300 max-w-prose">I’m a thoughtful, pragmatic engineer who values clean code and reliable execution. I enjoy shaping small, well‑scoped systems that deliver measurable outcomes.</p>
-  <p class="text-zinc-300 max-w-prose mt-3">When I’m not coding, I help run workshops for new developers and enjoy exploring Toronto’s coffee scene.</p>
+<Base title="About — Mohammed Asrar Ali" description="The person behind the code. CS student, developer, anime enjoyer.">
+  <section class="py-12 md:py-16">
+    <div class="animate-fade-up opacity-100">
+      <h1 class="font-display text-4xl md:text-5xl font-bold mb-2">About Me</h1>
+      <p class="text-zinc-500 font-mono text-sm">// TODO: write a better bio</p>
+    </div>
+
+    <div class="grid md:grid-cols-[1.5fr,1fr] gap-12 mt-10">
+      <div class="space-y-5 text-zinc-300 leading-relaxed reveal">
+        <p class="text-lg">
+          Hey! I'm <span class="text-zinc-100 font-medium">Asrar</span>. I write code at
+          <span class="text-zinc-100">Trend Micro</span> by day, build RAG systems by night, and
+          argue with LLMs somewhere in between.
+        </p>
+        <p>
+          I'm doing my Honours BSc in Computer Science at <span class="text-zinc-100">Lakehead University</span>
+          with a 3.7 GPA &mdash; made the Dean's List and got a Tamblyn Merit Scholarship, which mostly means
+          I traded sleep for grades.
+        </p>
+        <p>
+          Day to day, I build features for the Cloud One platform in Java, wrangle CI/CD pipelines,
+          and once delivered a report generator to a customer in just 3 days, helping close an enterprise deal.
+          Before that, I interned at an aviation company where I built a flight scheduler that
+          cut errors by <span class="text-brand-400 font-medium">40%</span> &mdash; turns out spreadsheets
+          aren't great at managing aircraft maintenance.
+        </p>
+        <p>
+          On my own time, I build AI projects because I genuinely find it fun (yes, really).
+          My <a href="https://huggingface.co/spaces/md-asrar/system-design-assistant" target="_blank" rel="noopener" class="text-brand-400 link-underline">System Design Assistant</a>
+          indexes 11K+ chunks with hybrid retrieval and gets 79% recall at sub-100ms latency. I also trained a CNN to detect pneumonia from chest X-rays with a 0.91 AUC.
+        </p>
+        <p>
+          Outside of code, I volunteer at <span class="text-zinc-200">Code4kids</span>, teaching Python to 30+ kids.
+          Explaining recursion to a 14-year-old is harder than any LeetCode problem, trust me.
+        </p>
+      </div>
+
+      <div class="space-y-5 reveal">
+        <!-- Quick facts -->
+        <div class="p-5 rounded-xl border border-surface-200 bg-surface-50">
+          <p class="text-xs text-zinc-500 uppercase tracking-wider font-mono mb-4">Quick Facts</p>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between">
+              <dt class="text-zinc-500">Location</dt>
+              <dd class="text-zinc-200">{config.location}</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500">University</dt>
+              <dd class="text-zinc-200">{config.university}</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500">GPA</dt>
+              <dd class="text-zinc-200">3.7 / 4.0</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500">Grad</dt>
+              <dd class="text-zinc-200">{config.gradDate}</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500">Fuel</dt>
+              <dd class="text-zinc-200">Matcha (lying, it's Red Bull)</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Currently -->
+        <div class="p-5 rounded-xl border border-surface-200 bg-surface-50">
+          <p class="text-xs text-zinc-500 uppercase tracking-wider font-mono mb-4">Right Now</p>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-2">
+              <span class="status-dot"></span>
+              <span class="text-zinc-300">Working at <span class="text-zinc-100">Trend Micro</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-500 inline-block"></span>
+              <span class="text-zinc-300">Building side projects with RAG</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-accent-500 inline-block"></span>
+              <span class="text-zinc-300">Teaching kids to code</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="p-5 rounded-xl border border-surface-200 bg-surface-50">
+          <p class="text-xs text-zinc-500 uppercase tracking-wider font-mono mb-4">Interests</p>
+          <div class="flex flex-wrap gap-2">
+            {config.interests.map(i => (
+              <span class="tech-badge">{i}</span>
+            ))}
+            <span class="tech-badge">One Piece</span>
+            <span class="tech-badge">JJK</span>
+            <span class="tech-badge">Coffee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-line mt-16 mb-16"></div>
+
+    <!-- Fun section -->
+    <div class="reveal">
+      <h2 class="font-display text-3xl font-semibold mb-8">Things I Believe In</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-xl border border-surface-200 bg-surface-50 hover:border-brand-500/30 transition-colors">
+          <p class="font-display font-semibold text-lg mb-2">Luffy mentality</p>
+          <p class="text-sm text-zinc-400 leading-relaxed">I don't need a perfect plan. I just need to start, figure it out along the way, and never quit.</p>
+        </div>
+        <div class="p-5 rounded-xl border border-surface-200 bg-surface-50 hover:border-brand-500/30 transition-colors">
+          <p class="font-display font-semibold text-lg mb-2">Ship it, then fix it</p>
+          <p class="text-sm text-zinc-400 leading-relaxed">Perfect code that never ships is worse than good code that's live. My RAG project is on Hugging Face &mdash; real users, real feedback.</p>
+        </div>
+        <div class="p-5 rounded-xl border border-surface-200 bg-surface-50 hover:border-brand-500/30 transition-colors">
+          <p class="font-display font-semibold text-lg mb-2">Gojo was right</p>
+          <p class="text-sm text-zinc-400 leading-relaxed">Throughout Heaven and Earth, you alone must debug your own code. No LLM can save you from a missing semicolon at 3am.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>

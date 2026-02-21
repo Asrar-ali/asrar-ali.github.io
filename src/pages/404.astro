@@ -1,10 +1,35 @@
 ---
 import Base from "@/layouts/Base.astro";
 ---
-<Base title="Not Found — Md Ali">
-  <div class="py-20 text-center">
-    <h1 class="text-5xl font-bold">404</h1>
-    <p class="mt-2 text-zinc-300">That page took a coffee break.</p>
-    <a href="/" class="mt-6 inline-block px-4 py-2 rounded bg-brand-600 hover:bg-brand-500">Back Home</a>
+<Base title="404 — Domain Expansion">
+  <div class="min-h-[70vh] flex flex-col items-center justify-center text-center relative">
+    <!-- Background glow effect -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-96 h-96 rounded-full bg-brand-500/5 blur-3xl"></div>
+    </div>
+
+    <div class="relative z-10">
+      <!-- Domain Expansion label -->
+      <p class="font-mono text-xs text-zinc-500 tracking-[0.3em] uppercase mb-6 animate-fade-up">Domain Expansion</p>
+
+      <!-- 404 Number -->
+      <h1 class="font-display text-8xl md:text-9xl font-bold gradient-text mb-2">404</h1>
+
+      <!-- Technique name -->
+      <p class="font-mono text-lg text-brand-400 mb-4 animate-fade-up-delay">localhost:3000</p>
+
+      <!-- Message -->
+      <p class="text-zinc-400 text-lg mb-2 animate-fade-up-delay max-w-md">
+        You've entered my domain... but this page doesn't exist here.
+      </p>
+      <p class="text-zinc-600 text-sm mb-10 animate-fade-up-delay-2 font-mono">
+        Even Gojo can't see through this Infinity.
+      </p>
+
+      <!-- CTA -->
+      <a href="/" class="group px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-brand-500/25 animate-fade-up-delay-2">
+        Return to the real world <span class="inline-block ml-1 transition-transform group-hover:translate-x-1">&rarr;</span>
+      </a>
+    </div>
   </div>
 </Base>

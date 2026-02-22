@@ -95,34 +95,57 @@ const currentPath = Astro.url.pathname;
       </div>
     </footer>
 
-    <!-- ── Mobile menu toggle ── -->
+    <!-- ── Mobile menu + Scroll reveal ── -->
     <script is:inline>
-      const toggle = document.getElementById('menuToggle');
-      const menu = document.getElementById('mobileMenu');
-      const openIcon = document.getElementById('menuOpen');
-      const closeIcon = document.getElementById('menuClose');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          const isOpen = !menu.classList.contains('hidden');
-          menu.classList.toggle('hidden');
-          openIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
-        });
-      }
-    </script>
+      function initPage() {
+        // Mobile menu
+        const toggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('mobileMenu');
+        const openIcon = document.getElementById('menuOpen');
+        const closeIcon = document.getElementById('menuClose');
 
-    <!-- ── Scroll reveal ── -->
-    <script is:inline>
-      document.documentElement.classList.add('js-reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+        function closeMenu() {
+          if (menu && !menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
           }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        }
 
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        if (toggle && menu) {
+          toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+          });
+
+          // Close menu when a link is clicked
+          menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+          });
+        }
+
+        // Reset menu state on page load (for ViewTransitions)
+        closeMenu();
+
+        // Scroll reveal
+        document.documentElement.classList.add('js-reveal');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      }
+
+      // Run on initial load
+      initPage();
+
+      // Re-run after Astro ViewTransitions navigate to a new page
+      document.addEventListener('astro:after-swap', initPage);
     </script>
   </body>
 </html>

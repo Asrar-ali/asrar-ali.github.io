@@ -1,6 +1,6 @@
 {
   "name": "Mohammed Asrar Ali",
-  "role": "Software Developer @ Trend Micro",
+  "role": "Software Developer @ TrendAI",
   "tagline": "I argue with LLMs for a living.",
   "email": "mali46@lakeheadu.ca",
   "location": "Toronto, ON",
@@ -13,8 +13,8 @@
   },
   "now": {
     "month": "February 2026",
-    "role": "Software Developer Co-op at Trend Micro",
-    "building": "Cloud One platform features at Trend Micro",
+    "role": "Software Developer Co-op at TrendAI",
+    "building": "Cloud One platform features at TrendAI",
     "demo": "https://huggingface.co/spaces/md-asrar/system-design-assistant"
   },
   "interests": [
